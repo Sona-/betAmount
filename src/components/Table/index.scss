@@ -1,4 +1,5 @@
 @import '../../scss/colors.scss';
+@import '../../scss/variables';
 
 .table-container {
     width: 100%;
@@ -53,7 +54,7 @@
 }
 
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: $mobileResolution) {
     .table-container {
         min-width: 100px;
 
