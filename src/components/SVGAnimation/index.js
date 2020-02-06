@@ -1,6 +1,7 @@
+
 import React from 'react';
-import shell from '../../images/component_2.png';
-import clam from '../../images/component.png';
+import shell from '../../images/shell.svg';
+import clam from '../../images/clam.svg';
 import Modal from '../../components/Modal';
 import './index.scss';
 
