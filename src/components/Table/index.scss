@@ -1,0 +1,75 @@
+@import '../../scss/colors.scss';
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    background: $blue1;
+    min-width: 500px;
+
+    .table-container-header {
+        display: flex;
+        background: $blue6;
+
+        div {
+            text-align: left;
+            height: 30px;
+            line-height: 30px;
+            color: $blue7;
+            width: 25%;
+
+            &:nth-child(1) {
+                padding-left: 10px;
+            }
+        }
+
+    }
+
+    .row {
+        display: flex;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+
+        div {
+            color: $white;
+            width: 25%;
+
+            &:nth-child(1) {
+                padding-left: 10px;
+            }
+
+            &.positive {
+                color: $red5;
+            }
+
+            &.negative {
+                color: $green5;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 550px) {
+    .table-container {
+        min-width: 100px;
+
+        .table-container-header div {
+            width: 50%;
+        }
+
+
+        .row div {
+            width: 50%;
+
+        }
+
+        .hide-mobile {
+            display: none;
+        }
+    }
+
+}

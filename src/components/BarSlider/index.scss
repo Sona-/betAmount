@@ -1,0 +1,60 @@
+@import '../../scss/colors.scss';
+
+.slide-bar-container {
+    display: flex;
+
+    .range-bar {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-end;
+        margin-right: 5px;
+        span {
+            color: $white;
+            font-size: 20px;
+
+        }
+        .bottom-range {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    .slide-bar {
+        height: 300px;
+        width: 50px;
+        cursor: pointer;
+        background: $red2;
+
+        .green {
+            width: 100%;
+            background: $green5;
+        }
+
+    }
+}
+
+.tooltip {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    color: $white;
+    background: $grey1;
+    font-size: 23px;
+    text-align: center;
+    line-height: 30px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0px;
+        left: 5px;
+        top: 50%;
+        border: 15px solid transparent;
+        border-left: 0;
+        border-right: 15px solid $grey1;
+        transform: translate(calc(-100% - 5px), -50%);
+    }
+}
