@@ -1,4 +1,6 @@
 @import '../../scss/colors.scss';
+@import '../../scss/variables.scss';
+
 
 .modal {
     position: fixed;
@@ -10,39 +12,48 @@
     height: 100%;
     overflow: auto;
     background-color: $black1;
-}
 
-.modal-content {
-    background-color: $blue3;
-    margin: auto;
-    width: 40%;
 
-    .modal-header {
-        background: $blue4;
-        height: 30px;
-        padding: 5px 10px;
+    .modal-content {
+        background-color: $blue3;
+        margin: auto;
+        width: 40%;
 
-        p {
-            font-size: 18px;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: $white;
-            line-height: 30px;
+        .modal-header {
+            background: $blue4;
+            height: 30px;
+            padding: 5px 10px;
 
-            &:nth-child(1) {
-                float: left;
+            p {
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: $white;
+                line-height: 30px;
+
+                &:nth-child(1) {
+                    float: left;
+                }
+
+                &:nth-child(2) {
+                    cursor: pointer;
+                    float: right;
+                }
             }
+        }
 
-            &:nth-child(2) {
-                cursor: pointer;
-                float: right;
-            }
+        .content {
+            height: 100px;
+            padding: 30px 15px;
+            color: $blue5;
         }
     }
 
-    .content {
-        height: 100px;
-        padding: 30px 15px;
-        color: $blue5;
+    @media only screen and (max-width: $mobileResolution) {
+        padding-top: 0;
+        .modal-content {
+            width: 100%;
+            height: 50%;
+        }
     }
 }
