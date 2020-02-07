@@ -8,6 +8,10 @@ class BarSlider extends React.Component {
         greenBarHeight: 0,
     }
 
+    onMouseLeave = () => {
+        this.setState({ tooltip: {}, greenBarHeight:0 });
+    }
+
     handelOnMouseMove = (e) => {
         const extraMarginLeft = 25;
         const extraMarginTop = 12;
@@ -52,6 +56,7 @@ class BarSlider extends React.Component {
                 <div className='slide-bar'
                     ref={(node) => this.slideBar = node}
                     onMouseMove={this.handelOnMouseMove}
+                    onMouseLeave={this.onMouseLeave}
                 >
                     <div className="green" style={{ height: greenBarHeight }} />
 
